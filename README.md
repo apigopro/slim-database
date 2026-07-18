@@ -10,21 +10,7 @@ the wrong place without it being visible in the constructor signature).
 
 ## Install
 
-Not published on Packagist — install as a VCS repository pointing at wherever you host it:
-
-```json
-{
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/your-org/slim-database.git"
-        }
-    ],
-    "require": {
-        "apigopro/slim-database": "^1.0"
-    }
-}
-```
+Published on Packagist
 
 ```bash
 composer update apigopro/slim-database
