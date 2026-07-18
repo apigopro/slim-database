@@ -11,11 +11,6 @@
  * @license   https://opensource.org/license/MIT
  *
  * @version 1.0.0 - Dragomir Vuckovic (18.07.2026) - Abstract database connection
- * @version 1.0.1 - Dragomir Vuckovic (19.07.2026) - Fixed invalid MySQL SET syntax
- *                   (SET NAMES/CHARACTER SET cannot take a LOWER() expression,
- *                   COLLATION_CONNECTION was missing "=", time_zone had a stray
- *                   "SET SET" and trailing ")"); fixed Oracle ALTER SESSION
- *                   trailing ")" typo.
  */
 
 declare(strict_types=1);
@@ -142,12 +137,6 @@ abstract class AbstractDatabaseConnection
 
     /**
      * MySQL database session configuration method
-     *
-     * SET NAMES / SET CHARACTER SET require a literal charset name, not a
-     * SQL expression — LOWER('UTF8MB4') is invalid syntax there, so the
-     * lowercasing has to happen in PHP before the value is embedded.
-     * SET collation_connection needs "=". Verified against a live MySQL
-     * 8.0 server.
      *
      * NOTE: named timezones (e.g. "UTC", "Europe/Sarajevo") require
      * MySQL's time zone tables to be populated first — see README
