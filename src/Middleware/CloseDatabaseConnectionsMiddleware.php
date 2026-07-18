@@ -11,10 +11,6 @@
  * @license   https://opensource.org/license/MIT
  *
  * @version 1.0.0 - Dragomir Vuckovic (18.07.2026) - Close database connections middleware
- * @version 1.0.1 - Dragomir Vuckovic (19.07.2026) - Moved from app-specific
- *                   "Apigo\Global\Database" into "SlimDatabase\Middleware"
- *                   so this generic, publishable package doesn't carry an
- *                   application-specific namespace inside it.
  */
 
 declare(strict_types=1);
