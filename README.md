@@ -13,7 +13,7 @@ the wrong place without it being visible in the constructor signature).
 Published on Packagist
 
 ```bash
-composer update apigopro/slim-database
+composer require apigopro/slim-database
 ```
 
 ## Requirements
