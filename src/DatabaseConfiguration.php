@@ -118,7 +118,7 @@ final class DatabaseConfiguration {
     }
 
     /**
-     * optional array constants method
+     * Optional array constants method
      * @return array
      */
     private function arrayOptional(string $key, string $default): array {
